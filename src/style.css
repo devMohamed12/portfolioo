@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
+
+.strokeText{
+      font-family: "Antonio", sans-serif;
+      /* color: #31a381; */
+      /* color: #31a381; */
+
+  
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 80px;
+  color: #3ec1b9;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 5px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+
