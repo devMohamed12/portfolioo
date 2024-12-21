@@ -5,42 +5,18 @@ import jsImg from "./assets/skills/js2.png";
 import reactImg from "./assets/skills/react22.png";
 import reduxImg from "./assets/skills/redux2.png";
 import twImg from "./assets/skills/tw2.png";
-
+import muiImg from "./assets/skills/materialui.png";
+import supabaseImg from "./assets/skills/supabase.png";
 
 // projects imgs
+import dashImg from "./assets/projects/dashborad/dash.jpg";
+import furnitureStoreImg from "./assets/projects/furnitureStore/furnitureStore.jpg";
 import foodBlogImg from "./assets/projects/foodBlog/foodBlog.png";
 import nikeImg from "./assets/projects/nike/nike.png";
 import msStoreImg from "./assets/projects/msStore/msStore.png";
 import TravelingImg from "./assets/projects/traveling/traveling.png";
 import CRUDSImg from "./assets/projects/cruds/cruds.png";
 
-export const products = [
-  {
-    title: "Product 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida ipsum eget ligula ultricies, in commodo eros feugiat. Nullam dignissim metus ut tincidunt commodo.",
-  },
-  {
-    title: "Product 2",
-    description:
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer dictum tortor id urna congue vestibulum.",
-  },
-  {
-    title: "Product 3",
-    description:
-      "Fusce consequat fringilla dui, ut tincidunt quam vehicula a. Duis sed libero at tortor ullamcorper volutpat. Vivamus id massa sed sem tincidunt tristique.",
-  },
-  {
-    title: "Product 4",
-    description:
-      "Cras consectetur dolor nec quam vehicula, vel finibus lorem eleifend. Ut sed orci eu libero tincidunt volutpat id vitae felis.",
-  },
-  {
-    title: "Product 5",
-    description:
-      "Suspendisse potenti. Proin consequat euismod magna, vel lacinia neque varius non. Curabitur lobortis ultricies mi, eget suscipit mauris malesuada nec.",
-  },
-];
 
 class Skill {
   constructor(name, backgroundColor, image, alt) {
@@ -58,9 +34,15 @@ const js = new Skill("JavaScript", "#D4A017", jsImg, "javascript");
 const react = new Skill("React", "#1f8ead", reactImg, "react");
 const redux = new Skill("Redux", "#764ABC", reduxImg, "redux");
 const tailwindCss = new Skill("Tailwind CSS", "#0a508a", twImg, "tailwind css");
-const sass = new Skill("Sass", "#CD6799", twImg, "sass");
+const mui = new Skill("martial ui", "#007FFF", muiImg, "martial ui");
+const supabase = new Skill(
+  "basics of supabase",
+  "#3ECF8E",
+  supabaseImg,
+  "basics of supabase"
+);
 
-export const skillsArray = [html, css, js, react, redux, tailwindCss, sass];
+export const skillsArray = [html, css, js, react, redux, tailwindCss , mui , supabase];
 
 class Project {
   constructor(
@@ -82,6 +64,26 @@ class Project {
     this.usedSkills = usedSkills;
   }
 }
+
+const dashBoard = new Project(
+  "Dashboard",
+  dashImg,
+  "Dashboard project that helps in cotroilling the data of Furniture store that i have created using react and supabase make me can add or remove or update the data with modern looking home page to give overview of the finical status , orders and visitors of the store ",
+  "https://github.com/devMohamed12/dashboard",
+  "https://devmohamed12.github.io/dashboard/#/",
+  "reactProject",
+  [react, supabase, reduxImg, mui]
+);
+
+const furnitureStore = new Project(
+  "Furniture Store ",
+  furnitureStoreImg,
+  "Furniture Store project for buying and selling furnitures",
+  "https://github.com/devMohamed12/furniture",
+  "https://devmohamed12.github.io/furniture/#/",
+  "reactProject",
+  [react,supabase, reduxImg , tailwindCss]
+);
 
 const foodBlogProject = new Project(
   "Food Blog",
@@ -133,28 +135,11 @@ const CRUD = new Project(
 );
 
 export const projectsData = [
+  dashBoard,
+  furnitureStore,
   foodBlogProject,
   nikeLandingPage,
   msStore,
   Traveling,
   CRUD,
-];
-
-export const projectsData1 = [
-  {
-    title: "testttttt",
-    image: jsImg,
-    alt: "teestttt",
-    description:
-      "lorem loremlorem lorem lorem lorem lorem lorem lorem lorem lorem ",
-    usedSkills: [html, css, js],
-  },
-  {
-    title: "testttttt",
-    image: jsImg,
-    alt: "teestttt",
-    description:
-      "lorem loremlorem lorem lorem lorem lorem lorem lorem lorem lorem ",
-    usedSkills: [html, css, js],
-  },
 ];
