@@ -20,13 +20,13 @@ const Skills = ({ data }) => {
       </p>
 
       
-      <div className="flex  gap-12 w-full overflow-x-scroll">
+      <div className="flex  gap-12 items-center w-full overflow-x-scroll">
         {data.map((skill, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1, duration: 1 }} // Staggered delay
+            transition={{ delay: index * 0.1, duration: 1 }} 
             className=""
           >
             <Skill skill={skill} />
